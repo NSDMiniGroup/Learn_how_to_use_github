@@ -17,5 +17,9 @@ git remote add <name> <url>
 
 把本地仓库推送到远程仓库：
 ```bash
-git push -u 
+git push -u <remote_name> <local_branch_name>:<remote_branch_name>
 ```
+注：remote_name是远程仓库名，local_branch_name则是想要推送的当前分支，remote_branch_name则是想要到的远程目的分支名;`-u`参数是用于创建local_branch与remote_branch的上流关系，简单地理解，就是当两条分支建立联系后，以后在local_branch上进行push、pull操作就可以省略参数。以上只是git push 的一种常用用法。
+
+## 从远程仓库获取内容
+
