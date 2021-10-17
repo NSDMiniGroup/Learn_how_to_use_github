@@ -22,4 +22,23 @@ git push -u <remote_name> <local_branch_name>:<remote_branch_name>
 注：remote_name是远程仓库名，local_branch_name则是想要推送的当前分支，remote_branch_name则是想要到的远程目的分支名;`-u`参数是用于创建local_branch与remote_branch的上流关系，简单地理解，就是当两条分支建立联系后，以后在local_branch上进行push、pull操作就可以省略参数。以上只是git push 的一种常用用法。
 
 ## 从远程仓库获取内容
+```bash
+git clone <url>
+```
+该命令默认把远程仓库的默认分支给克隆下来。
+```bash
+git branch -a
+```
+通过该命令可以查看克隆下来的目录的当前分支情况，`-a`参数可以同时显示本地仓库和远程仓库的分支信息。
+
+如果想要获取远程的其他分支，则使用下面命令
+```bash
+git checkout -b <newbranch_name> <remote_name>/<remote_branch_name>
+```
+注：`git checkout -b <newbranch_name>` <=> `git branch <newbranch_name> && git checkout <newbranch_name>`。
+
+## 获取最新的远程仓库分支
+如果需要同步远程仓库的最新内容，可以使用下面的命令
+
+
 
